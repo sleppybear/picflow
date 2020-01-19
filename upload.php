@@ -3,9 +3,12 @@
     <input type="submit" name="upload" value="Upload">
 </form>
 <?php
+use db\DbConnection;
+require_once "requirements.php";
+
 if(isset($_POST['upload'])){
     if(isset($_FILES['myimage'])){
-        $mysqli=new mysqli("localhost", "root", "", "testdb");
+        $con = DbConnection::Instance();
         $upload_image=$_FILES["myimage"]["name"];
         $folder="/images/";
         $success=move_uploaded_file($_FILES["myimage"]["tmp_name"], __DIR__."$folder".$_FILES["myimage"]["name"]);
@@ -13,8 +16,8 @@ if(isset($_POST['upload'])){
             echo "Success!";
         }
         else echo "Fail upload";
-        $mysqli->query("INSERT INTO `images` (`path`, `name`) VALUES('$folder', '$upload_image')");
-        $mysqli->close();
+        $con->query("INSERT INTO `images` (`path`, `name`) VALUES('$folder', '$upload_image')");
+        $con->close();
     }
     else echo "<strong>Choose file</strong>";
 }
