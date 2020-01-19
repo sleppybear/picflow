@@ -1,12 +1,15 @@
 <!DOCTYPE html>
+<style>
+    .min li a img{width: 100;}
+</style>
 <html>
 <head>
-    <title>Загрузка изображения</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Photo Flow</title>
 </head>
 <body>
-<div>
-    <?php include('upload.html');?>
-    <?php include('download.html');?>
-</div>
+<?php include('upload.php');?>
+<?php include('download.php');?>
 </body>
 </html>

@@ -1,0 +1,42 @@
+body{
+    background: #222;
+    color: white;
+}
+.wrapper{
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1100px;
+    margin-top: 50px;
+}
+.min{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+    width: 100px;
+
+}
+.min li{
+    padding: 0;
+    margin: 0;
+    float: left;
+    clear: both;
+    width: 100px;
+}
+.min li a{
+    display: block;
+    padding: 0 20px 21px 0;
+    width: 100px;
+}
+.min li a img{
+    display: block;
+    width: 100px;
+}
+.images{
+    width: 900px;
+    height: 500px;
+    overflow: hidden;
+}
+img{
+    width: 100px;
+}
